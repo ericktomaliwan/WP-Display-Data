@@ -147,6 +147,9 @@ class Wp_data_display {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wp_data_display-public.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wp_data_display-controller.php';
+
+
 		$this->loader = new Wp_data_display_Loader();
 
 	}

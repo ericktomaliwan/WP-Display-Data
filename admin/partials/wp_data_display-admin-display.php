@@ -55,3 +55,33 @@ function html_analytics_end_wrap_row() {
         </div><!--wrapper-->
 	<?php
 }
+
+/* Display Leadeboard Upload Form */
+function display_upload_form() {
+	?>
+	<div class="wpdisplay_upload-container">
+		<div class="row">
+			<div id="import_wpdisplay_success"></div>
+
+			<div class="notewarning">
+				<span class="message">
+					If you're unsure how to upload the file, please contact
+					<a href="mailto:hi@ericktomaliwan.me">hi@ericktomaliwan.me</a>
+				</span>
+			</div>	
+
+			<form id="import_wpdisplay_form" name="wpdisplay-add-leaderboard" method="post" enctype="multipart/form-data">
+				<div class="form-field form-required csv-wrap">
+					<label for="csv"><?php _e( 'Upload', EATF_LB_DISP_ID ); ?></label><br>
+					<input type="file" name="wpdisplay_filename" id="csv" size="40"/>
+				</div><br>
+				<p class="submit">
+					<input type="submit" name="submit_wpdisplay_import" onclick="return confirm('Are you sure you want to upload this file?')" id="submit_wpdisplay_import_btn" class="button button-primary" value="Upload"/>
+					<span class="waitspinner"></span>
+					<span class="wait-text" style="display: none">data processing..please wait..</span>
+				</p>
+			</form>
+		</div>
+	</div>
+	<?php
+}

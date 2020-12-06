@@ -31,6 +31,10 @@ class Wp_data_display_Activator {
 	 */
 	public static function activate() {
 
+		$db = new Class_Wp_Data_Display_Db();
+		$db->create_db();
+
+
 	}
 
 }

@@ -136,5 +136,7 @@ class Wp_data_display_Admin {
 
 	public function dashboard_home_wpdispdata_wplist(){
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/wp_data_display-admin-display.php'; //html view
+
 	}
 }
